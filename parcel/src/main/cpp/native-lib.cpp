@@ -36,6 +36,12 @@ public:
         mDataPos = position;
 
     }
+
+    jint readInt() {
+        int result = *reinterpret_cast<int *>(mData + mDataPos);
+        mDataPos += sizeof(int);
+        return result;
+    }
 };
 
 
@@ -49,14 +55,15 @@ JNIEXPORT jlong JNICALL Java_jni_demo_com_parcel_nativeCreate
 JNIEXPORT void JNICALL Java_jni_demo_com_parcel_nativeWriteInt
         (JNIEnv *, jobject, jlong nativePtr, jint value) {
 
-    Parcel *parcel = (Parcel *) nativePtr;
+    Parcel *parcel = reinterpret_cast<Parcel *>(nativePtr);
     parcel->writeInt(value);
 }
 
 
 JNIEXPORT jint JNICALL Java_jni_demo_com_parcel_nativeReadInt
-        (JNIEnv *, jobject, jlong) {
-
+        (JNIEnv *, jobject, jlong nativePtr) {
+    Parcel *parcel = reinterpret_cast<Parcel *>(nativePtr);
+    return parcel->readInt();
 }
 
 JNIEXPORT void JNICALL Java_jni_demo_com_parcel_nativeSetDataPosition
