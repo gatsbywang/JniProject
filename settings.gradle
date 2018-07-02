@@ -1,1 +1,1 @@
-include ':app', ':parcel'
+include ':app', ':parcel', ':ArrayList'
