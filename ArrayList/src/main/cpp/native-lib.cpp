@@ -61,4 +61,11 @@ Java_com_demo_jni_arraylist_MainActivity_arraycopy(JNIEnv *env, jclass type, job
 
     }
 
+    try{
+
+    }catch (...){
+        jclass je = env->FindClass("java/lang/Exception");
+        env->ThrowNew(je, "Inknow exception in JNI code");
+    }
+
 }
