@@ -1,1 +1,3 @@
-include ':app', ':parcel', ':ArrayList'
+//include ':app', ':parcel', ':ArrayList',
+
+include ':BankCardIdendification'

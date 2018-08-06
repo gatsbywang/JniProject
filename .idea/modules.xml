@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ArrayList/ArrayList.iml" filepath="$PROJECT_DIR$/ArrayList/ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BankCardIdendification/BankCardIdendification.iml" filepath="$PROJECT_DIR$/BankCardIdendification/BankCardIdendification.iml" />
       <module fileurl="file://$PROJECT_DIR$/JniProject.iml" filepath="$PROJECT_DIR$/JniProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/parcel/parcel.iml" filepath="$PROJECT_DIR$/parcel/parcel.iml" />
     </modules>
   </component>
 </project>
